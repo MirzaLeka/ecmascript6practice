@@ -26,7 +26,7 @@ function funky (text, c, id) {
 
 $(id).css("color",c);
 
-$(id).html(text);
+$(id).html(text); 
 
 } 
 
@@ -76,3 +76,23 @@ console.log(simpleYield().next().value);
 
 THE PROBLEM WITH THIS IS BECAUSE I'M ALWAYS GETTING THE SAME VALUE (FIRST YIELD)
 */
+
+////////// Reversing JS Events
+
+let numOne = document.getElementById("inputOne");
+let numTwo = document.getElementById("inputTwo");
+let addSum = document.getElementById("sum");
+
+numOne.addEventListener("input", add);
+numTwo.addEventListener("input", add);
+
+function add() {
+let one = parseFloat(numOne.value) || 0;
+let two = parseFloat(numTwo.value) || 0;
+
+addSum.innerHTML = one + two;
+
+}
+
+
+
