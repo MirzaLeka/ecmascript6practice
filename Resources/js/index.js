@@ -94,5 +94,22 @@ addSum.innerHTML = one + two;
 
 }
 
+// Promises again
+
+var pro = new Promise( (resolve, reject) => {
+  
+  if (2 > 3) {
+    resolve("You are right");
+  }
+  else {reject("You are wrong");}
+  
+}  );
+
+pro.then((msg) => {
+  console.log(msg);
+}, (err) => {
+  console.log(err);
+}    );
+
 
 
