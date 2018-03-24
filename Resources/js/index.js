@@ -55,19 +55,21 @@ pc.getSpecs();
 
 
 function* simpleYield() {
-console.log("go go go");
+console.log("ES5 generators");
 yield "stop!";
-console.log("Go go go!");
+console.log("Functions execute in steps (checkpoints), whhen we want them to.");
 yield "not yet!";
-console.log("Ok, but I'll go");
+console.log("Funtions are marked with 'function*'");
 
 
 }
 
-let firstYield = simpleYield();
-console.log(firstYield.next().value);
-console.log(firstYield.next().value);
-console.log(firstYield.next().value);
+
+let checkpoint = simpleYield();
+console.log(checkpoint.next().value);
+console.log(checkpoint.next().value);
+console.log(checkpoint.next().value);
+
 ////////// and this works fine :D
 /*
 console.log(simpleYield().next().value);
@@ -111,5 +113,12 @@ pro.then((msg) => {
   console.log(err);
 }    );
 
+// Spread operator 
+let meatArray = ["cevaps", "kebabs"];
+let fruitArray = ["apples", "bananas", "oranges"];
+let vegetablesArray = ["potato", "rice", "tomato"];
+
+let foodArray = [...meatArray, ...fruitArray, ...vegetablesArray];
+console.log(foodArray);
 
 
