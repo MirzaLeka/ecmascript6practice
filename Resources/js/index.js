@@ -79,7 +79,7 @@ console.log(simpleYield().next().value);
 THE PROBLEM WITH THIS IS BECAUSE I'M ALWAYS GETTING THE SAME VALUE (FIRST YIELD)
 */
 
-////////// Reversing JS Events
+////////// Rehearsing JS Events
 
 let numOne = document.getElementById("inputOne");
 let numTwo = document.getElementById("inputTwo");
@@ -120,5 +120,97 @@ let vegetablesArray = ["potato", "rice", "tomato"];
 
 let foodArray = [...meatArray, ...fruitArray, ...vegetablesArray];
 console.log(foodArray);
+
+
+let d = new Date;
+
+/* 20 String Methods */
+
+let wordOne = "My name is Mirza!";
+let wordTwo = `I'm ${d.getFullYear() - 1994} years old.`;
+const selectedWord = "Homer";
+const charNum = 5;
+
+// Original strings
+console.log(`Value of var wordOne is: ${wordOne}`);
+console.log(`Value of var wordTwo is: ${wordTwo}`)
+
+
+/* indexOf() */
+
+// Prints index of starting letter of selectedWord. If there is no selectedWord in wordOne variable, it will output "-1"
+console.log((`Index of ${selectedWord} is ${wordOne.indexOf(selectedWord)} \n`));
+
+/* match() */
+
+// If selectedWord is part of String inside wordOne variable, it will print selectedWord to screen else it will output "null"
+console.log(`Match word ${selectedWord}: ${wordOne.match(selectedWord)}`);
+
+/* replace() */
+
+// Replacing word from variable word with our selectedWord variable
+// Notice that I put word "Mirza" as /Mirza/. This is RegEx!
+console.log(`Replacing word Mirza with word ${selectedWord}: ${wordOne.replace(/Mirza/, selectedWord)}`);
+
+ /* chatAt() */
+
+// Returns a character with the index of value we inserted
+ console.log(`CharAt(${charNum}): ${wordOne.charAt(charNum)}`);
+
+ /* charCodeAt() */
+
+ // Returns and ASCII code of character specified with the value we inserted
+ console.log(`CharCodeAt(${charNum}): ${wordOne.charCodeAt(charNum)}`);
+
+/* concat() */
+
+// Concats multiple values
+console.log(`Concating wordOne and wordTwo: ${wordOne.concat(wordTwo)}`);
+
+ /* endsWith() */
+
+ // Does String end with this word/letter or not? If it does this will print out true, else it will output false
+ console.log(`WordOne ends with ${selectedWord}: ${wordOne.endsWith(selectedWord)}`);
+
+ /* fromCharCode() */
+
+ // Returns char of the ASCII code (number) we insert
+ console.log(`ASCII code with value 109 belongs to character ${String.fromCharCode(109)}`); // Use of String object
+
+/* includes() */
+
+// Returns true or false depending on whether variable includes the value or doesn't
+console.log(`Variable wordOne includes name Mirza: ${wordOne.includes('Mirza')}`);
+
+ /* lastIndexOf() */
+
+const LIndex = "Frontend, Backend!"
+console.log("LIndex variable: " + LIndex);
+
+// Variable LIndex has two instances of word "end". This returns the index of last instance of the word end
+console.log("Index of a last mention of 'end' in LIndex variable is at value: " + LIndex.lastIndexOf("end"));
+
+
+ // repeat()
+
+ // search()
+
+ // slice()
+
+ // split()
+
+ // startsWith()
+
+ // substr()
+
+ // substring()
+
+ // toLowerCase()
+
+ // toUpperCase()
+
+ // trim()
+
+
 
 
