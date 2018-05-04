@@ -191,25 +191,49 @@ console.log("LIndex variable: " + LIndex);
 console.log("Index of a last mention of 'end' in LIndex variable is at value: " + LIndex.lastIndexOf("end"));
 
 
- // repeat()
+  /* repeat() */
+  
+  // Prints (repeats) same var three times
+  console.log(wordOne.repeat(3));
 
- // search()
+ /* search() */
+ console.log(LIndex.search("end"));
 
- // slice()
+ /* slice() */
+ console.log(LIndex.slice(2,4));
 
- // split()
+ /* split() */
+ 
+ // Splits string into multiple array elements, in the following splits after the space and divides string into array of two elements = two words
+ console.log(LIndex.split(" "));
 
- // startsWith()
+ /* startsWith() */
 
- // substr()
+ // If string starts with "I'm" this will return true, else we'll get a false
+ console.log(wordTwo.startsWith("I'm"));
 
- // substring()
+ /* substr() */
 
- // toLowerCase()
+ // Prints everything from 2nd with the length of 4 characters
+ console.log(LIndex.substr(2,4));
 
- // toUpperCase()
+ /* substring() */
 
- // trim()
+ // Prints everything from 2nd to 4th index
+ console.log(LIndex.substring(2,4));
+
+ /* toLowerCase() */
+
+ // Entire string goes lowercase
+ console.log(wordOne.toLowerCase());
+
+ /* toUpperCase() */
+
+ // Entire string goes uppercase
+ console.log(wordOne.toUpperCase());
+
+ /* trim() */
+ console.log(LIndex.trim());
 
 
 
