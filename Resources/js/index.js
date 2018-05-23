@@ -194,47 +194,80 @@ console.log("Index of a last mention of 'end' in LIndex variable is at value: " 
   /* repeat() */
   
   // Prints (repeats) same var three times
-  console.log(wordOne.repeat(3));
+  console.log("Let's repeat this three times: " + wordOne.repeat(3));
 
  /* search() */
- console.log(LIndex.search("end"));
+ 
+ // Returns an index of a word we searched for. Can be used with regex.
+ console.log("Position of the word end in String '" + LIndex + "' is " + LIndex.search("end"));
 
  /* slice() */
- console.log(LIndex.slice(2,4));
+
+ // Creates new String that Starts from 2nd & ends in 4th index (in this example)
+ console.log("Slicing string '" + LIndex + "' on 2nd and 4th index and getting a new string: " + + LIndex.slice(2,4));
+ // If we choose 2 & -2 we'll get NAN for slice
 
  /* split() */
  
  // Splits string into multiple array elements, in the following splits after the space and divides string into array of two elements = two words
- console.log(LIndex.split(" "));
+ console.log("Let's split LIndex variable into an array of strings after every 'space': " + LIndex.split(" "));
 
  /* startsWith() */
 
  // If string starts with "I'm" this will return true, else we'll get a false
- console.log(wordTwo.startsWith("I'm"));
+ console.log("Does string '" + wordTwo + "' start with string 'I'm': " + wordTwo.startsWith("I'm"));
 
  /* substr() */
 
- // Prints everything from 2nd with the length of 4 characters
- console.log(LIndex.substr(2,4));
+ // Using subtr is similar to using slice
+ // subtr a String that starts from 2nd index with the length of 4 characters
+ console.log("subtr creates a string from variable '" + LIndex + "' that starts at 2nd index and has 4 chracters total: " +LIndex.substr(2,4));
 
  /* substring() */
 
  // Prints everything from 2nd to 4th index
- console.log(LIndex.substring(2,4));
+ console.log("Using substring, like with slice, we can print everything from 2nd to 4th index: " + LIndex.substring(2,4));
+ // If we choose 2 & -2 we'll get 'Fr', which in this case is String from 2nd index and
+ // two characters (or all if we run out of characters) before 2nd index
 
  /* toLowerCase() */
 
  // Entire string goes lowercase
- console.log(wordOne.toLowerCase());
+ console.log("Let's lowercase: " + wordOne.toLowerCase());
 
  /* toUpperCase() */
 
  // Entire string goes uppercase
- console.log(wordOne.toUpperCase());
+ console.log("Let's uppercase: " + wordOne.toUpperCase());
 
  /* trim() */
- console.log(LIndex.trim());
 
+ // Trims empty spaces before and/or after words in String
+ var wordThree = "     Please, subsribe to my channel!       ";
+ console.log("Trimming empty spaces in string: '" + wordThree + "' to this: " + wordThree.trim());
+
+
+ /* Slice vs Substring
+
+What they have in common:
+
+If start equals stop: returns an empty string
+If stop is omitted: extracts characters to the end of the string
+If either argument is greater than the string's length, the string's length will be used instead.
+
+// Distinctions of substring():
+
+If start > stop, then substring will swap those 2 arguments.
+If either argument is negative or is NaN, it is treated as if it were 0.
+
+// Distinctions of slice():
+
+If start > stop, slice() will NOT swap the 2 arguments.
+If start is negative: sets char from the end of string, exactly like substr() in Firefox. This behavior is observed in both Firefox and IE.
+If stop is negative: sets stop to: string.length – Math.abs(stop) (original value).
+
+
+ */
 
 
 
