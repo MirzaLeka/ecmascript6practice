@@ -131,6 +131,18 @@ var age = 24;
 	
 	ninja.chop(5); 
 	
+	let mySet = new Set();
+	
+	mySet.add("Mirza").add("Ermin");
+	mySet.size();
+	mySet.remove("Ermin");
+	mySet.size();
+	
+	
+	let myMap = new Map();
+	
+	myMap.add(1994, "Year").add([1,2,3]: 47);
+	
 	
 	
 	
